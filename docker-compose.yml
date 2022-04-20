@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  api-mongo:
+    image: mongo:5.0.6
+    container_name: mongo-dev
+    restart: always
+    networks:
+      - app-network
+    volumes:
+      - db-data:/data/db
+    ports:
+      - "27017:27017"
+  api-server:
+    build:
+      args:
+          - NODE_ENV=development
+      context: .
+    command: yarn run code:dev
+    container_name: api-server
+    image: api-server
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=development
+      - NODE_PATH=${NODE_PATH}
+      - PORT=9009
+      - MONGO_URL=mongodb://host.docker.internal:27017/api
+    volumes:
+      - /usr/app/node_modules
+      - ./logs:/logs
+      - ./src:/usr/app/src
+    networks:
+      - app-network
+    ports:
+      - "9009:9009"
+
+volumes:
+  db-data:
+
+networks:
+  app-network:
+    driver: bridge
