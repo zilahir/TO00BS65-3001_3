@@ -20,6 +20,7 @@ COPY openapi.json $WORKDIR/openapi.json
 RUN yarn build
 
 ENV NODE_PATH=/usr/app/node_modules
+ENV MONGO_URL=mongodb://host.docker.internal:27017/api
 VOLUME ${NODE_PATH}
 
 # Copy node modules and build directory
