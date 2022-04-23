@@ -23,11 +23,11 @@ ENV NODE_PATH=/usr/app/node_modules
 VOLUME ${NODE_PATH}
 
 # Copy node modules and build directory
-# COPY ./node_modules /usr/app/node_modules
+COPY ./node_modules /usr/app/node_modules
 COPY . /usr/app/
 
 # Copy static files
-# COPY src/public dist/src/public
+COPY src/public dist/src/public
 
 EXPOSE 9009
 CMD ["dist/src/server.js"]
