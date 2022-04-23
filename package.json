@@ -20,7 +20,6 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "preinstall": "yarn global add nodemon",
     "eslint": "eslint src/server.ts",
     "setup-actions": "chmod +x ./scripts/setup-github-actions.sh; ./scripts/setup-github-actions.sh",
     "build": "tsc",
