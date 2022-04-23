@@ -11,11 +11,11 @@ const swaggerUiOptions = {
 const router = Router();
 
 // Book routes
-router.post('/book/add', BookController.add);
-router.get('/book/all', BookController.all);
-router.get('/book/search', BookController.search);
-router.get('/book/id/:bookId', BookController.get);
-router.delete('/book/id/:bookId', BookController.remove);
+router.post('/api/book/add', BookController.add);
+router.get('/api/book/all', BookController.all);
+router.get('/api/book/search', BookController.search);
+router.get('/api/book/id/:bookId', BookController.get);
+router.delete('/api/book/id/:bookId', BookController.remove);
 
 // Dev routes
 if (process.env.NODE_ENV === 'development') {

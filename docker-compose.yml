@@ -16,7 +16,7 @@ services:
       args:
           - NODE_ENV=development
       context: .
-    command: yarn run code:dev
+    command: yarn run dev-server
     container_name: api-server
     image: api-server
     restart: unless-stopped

@@ -5,8 +5,8 @@
     "version": "1.0.0",
     "description": "API Service endpoints",
     "contact": {
-      "email": "sidhant@panda.fyi",
-      "name": "Sidhant Panda"
+      "email": "zilahi@gmail.com",
+      "name": "Richard Zilahi"
     }
   },
   "servers": [
@@ -21,7 +21,7 @@
     }
   ],
   "paths": {
-    "/book/add": {
+    "/api/book/add": {
       "post": {
         "tags": ["book"],
         "summary": "Add a book to the database",
@@ -43,7 +43,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/BookSchema"
+                  "$ref": "#/components/schemas/api/bookSchema"
                 }
               }
             }
@@ -71,7 +71,7 @@
         }
       }
     },
-    "/book/all": {
+    "/api/book/all": {
       "get": {
         "tags": ["book"],
         "summary": "Get all books in database",
@@ -86,7 +86,7 @@
                     "books": {
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/BookSchema"
+                        "$ref": "#/components/schemas/api/bookSchema"
                       }
                     }
                   }
@@ -107,7 +107,7 @@
         }
       }
     },
-    "/book/id/{bookId}": {
+    "/api/book/id/{bookId}": {
       "get": {
         "parameters": [
           {
@@ -131,7 +131,7 @@
                 "schema": {
                   "properties": {
                     "book": {
-                      "$ref": "#/components/schemas/BookSchema"
+                      "$ref": "#/components/schemas/api/bookSchema"
                     }
                   }
                 }
@@ -182,7 +182,7 @@
         }
       }
     },
-    "/book/search": {
+    "/api/book/search": {
       "get": {
         "tags": ["book"],
         "summary": "Search books by name or author",
@@ -217,7 +217,7 @@
                     "books": {
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/BookSchema"
+                        "$ref": "#/components/schemas/api/bookSchema"
                       }
                     }
                   }
