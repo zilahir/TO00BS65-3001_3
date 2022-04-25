@@ -17,8 +17,7 @@ COPY src $WORKDIR/src
 COPY tsconfig.json $WORKDIR/tsconfig.json
 COPY openapi.json $WORKDIR/openapi.json
 
-ENV MONGO_URL="helloka"
-
+ENV MONGO_URL=${MONGO_URL}
 # Build dist
 RUN yarn build
 
