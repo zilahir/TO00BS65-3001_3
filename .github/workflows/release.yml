@@ -17,6 +17,9 @@ jobs:
           heroku_app_name: "laurea-api"
           heroku_email: "zilahi@gmail.com"
           usedocker: true
+          docker_build_args: |
+            NODE_ENV
+            MONGO_URL
           justlogin: true
       - name: "Login to heroku registry"
         run: heroku container:login
