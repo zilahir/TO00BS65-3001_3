@@ -18,6 +18,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "laurea-api"
           heroku_email: "zilahi@gmail.com"
+          branch: "release"
           usedocker: true
           justlogin: true
           docker_build_args: |
@@ -30,3 +31,4 @@ jobs:
         run: heroku container:release web --app laurea-api
         env:
           NODE_ENV: production
+          MONGO_URL: ${{secrets.MONGO_URL}}
