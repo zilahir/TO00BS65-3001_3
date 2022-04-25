@@ -21,7 +21,7 @@
     }
   ],
   "paths": {
-    "/api/book/add": {
+    "/book/add": {
       "post": {
         "tags": ["book"],
         "summary": "Add a book to the database",
@@ -43,7 +43,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/api/bookSchema"
+                  "$ref": "#/components/schemas/BookSchema"
                 }
               }
             }
@@ -86,7 +86,7 @@
                     "books": {
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/api/bookSchema"
+                        "$ref": "#/components/schemas/BookSchema"
                       }
                     }
                   }
@@ -131,7 +131,7 @@
                 "schema": {
                   "properties": {
                     "book": {
-                      "$ref": "#/components/schemas/api/bookSchema"
+                      "$ref": "#/components/schemas/BookSchema"
                     }
                   }
                 }
@@ -217,7 +217,7 @@
                     "books": {
                       "type": "array",
                       "items": {
-                        "$ref": "#/components/schemas/api/bookSchema"
+                        "$ref": "#/components/schemas/BookSchema"
                       }
                     }
                   }
