@@ -1,7 +1,7 @@
 {
   "name": "@zilahir/to00bs65-3001-3",
   "version": "1.0.0",
-  "description": "A minimalist TypeScript-Express boilerplate",
+  "description": "A simple nodeJS api",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zilahir/TO00BS65-3001_3.git"

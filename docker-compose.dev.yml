@@ -16,6 +16,7 @@ services:
       args:
           - NODE_ENV=development
       context: .
+      dockerfile: ./local.Dockerfile
     command: yarn run dev-server
     container_name: api-server
     image: api-server
