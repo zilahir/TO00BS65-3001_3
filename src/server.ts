@@ -13,6 +13,8 @@ import logger from './logger';
 
 const PORT = process.env.PORT || 9009;
 
+console.log('env', JSON.stringify(process.env));
+
 let debugCallback;
 if (process.env.NODE_ENV === 'development') {
   debugCallback = (collectionName: string, method: string, query: any, doc: string): void => {
