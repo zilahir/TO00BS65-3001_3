@@ -29,6 +29,6 @@ jobs:
       - name: "Releases the container"
         run: heroku container:release web --app laurea-api
         env:
-          NODE_ENV: production
+          NODE_ENV: development
           HD_MONGO_URL: ${{secrets.MONGO_URL}}
           MONGO_URL: ${{secrets.MONGO_URL}}
