@@ -1,6 +1,4 @@
 FROM node:16.14.2 as base
-RUN --mount=type=secret,id=MONGO_URL \
-  cat /run/secrets/MONGO_URL
 
 ENV WORKDIR=/usr/app
 WORKDIR ${WORKDIR}
