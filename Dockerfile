@@ -18,6 +18,7 @@ COPY tsconfig.json $WORKDIR/tsconfig.json
 COPY openapi.json $WORKDIR/openapi.json
 
 ENV MONGO_URL=$MONGO_URL
+ENV NODE_ENV=$NODE_ENV
 # Build dist
 RUN yarn build
 
