@@ -21,7 +21,7 @@
     }
   ],
   "paths": {
-    "/book/add": {
+    "/api/book/add": {
       "post": {
         "tags": ["book"],
         "summary": "Add a book to the database",
