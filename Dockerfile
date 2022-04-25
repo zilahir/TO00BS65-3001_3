@@ -1,7 +1,7 @@
 FROM node:16.14.2 as base
 
 ENV WORKDIR=/usr/app
-ENV MONGO_URL=$MONGO_URL
+#ENV MONGO_URL=$MONGO_URL
 WORKDIR ${WORKDIR}
 
 # Add package file
