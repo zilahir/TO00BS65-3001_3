@@ -1,4 +1,6 @@
 FROM node:16.14.2 as base
+RUN --mount=type=secret,id=MONGO_URL \
+  cat /run/secrets/MONGO_URL
 
 ENV WORKDIR=/usr/app
 WORKDIR ${WORKDIR}
@@ -20,7 +22,7 @@ COPY openapi.json $WORKDIR/openapi.json
 RUN yarn build
 
 ENV NODE_PATH=/usr/app/node_modules
-ENV MONGO_URL=mongodb://host.docker.internal:27017/api
+ENV MONGO_URL=${MONGO_URL}
 VOLUME ${NODE_PATH}
 
 # Copy node modules and build directory
