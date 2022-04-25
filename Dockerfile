@@ -1,5 +1,6 @@
 FROM node:16.14.2 as base
 
+ARG MONGO_URL
 ENV WORKDIR=/usr/app
 WORKDIR ${WORKDIR}
 
@@ -16,7 +17,7 @@ COPY src $WORKDIR/src
 COPY tsconfig.json $WORKDIR/tsconfig.json
 COPY openapi.json $WORKDIR/openapi.json
 
-ENV MONGO_URL=$HD_MONGO_URL
+ENV MONGO_URL=$MONGO_URL
 # Build dist
 RUN yarn build
 
