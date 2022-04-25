@@ -21,7 +21,7 @@ COPY openapi.json $WORKDIR/openapi.json
 RUN yarn build
 
 ENV NODE_PATH=/usr/app/node_modules
-ENV MONGO_URL=${MONGO_URL}
+# ENV MONGO_URL=${MONGO_URL}
 VOLUME ${NODE_PATH}
 
 # Copy node modules and build directory
