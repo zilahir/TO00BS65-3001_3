@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === 'development') {
 const safeMongooseConnection = new SafeMongooseConnection({
   mongoUrl: process.env.MONGO_URL ?? '',
   debugCallback,
-  onStartConnection: mongoUrl => logger.info(`Connecting to MongoDB at ${mongoUrl}`),
+  onStartConnection: mongoUrl => logger.info(`Connecting debug to MongoDB at ${mongoUrl}`),
   onConnectionError: (error, mongoUrl) => logger.log({
     level: 'error',
     message: `Could not connect to MongoDB at ${mongoUrl}`,
