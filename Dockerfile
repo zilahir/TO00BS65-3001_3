@@ -29,7 +29,7 @@ VOLUME ${NODE_PATH}
 COPY . /usr/app/
 
 # Copy static files
-# COPY src/public dist/src/public
+COPY src/public dist/src/public
 
 EXPOSE 9009
 CMD ["dist/src/server.js"]
