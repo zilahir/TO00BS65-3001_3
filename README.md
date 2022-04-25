@@ -178,3 +178,33 @@ The `manifest` of the `apidoc` is defined in the [`openapi.json`](https://github
 
 Every request contains a `schema` which defines an `example` body (where needed), and can be executed as is. The response is also shown in the `UI`.
 
+`POST`: `/api/book/add`
+
+```
+{
+  "message": "Saved",
+  "book": {
+    "name": "The Hitchhiker's Guide to the Galaxy",
+    "author": "Douglas Adams",
+    "_id": "62670eec1ab01ad875ff38af",
+    "createdAt": "2022-04-25T21:13:16.723Z",
+    "updatedAt": "2022-04-25T21:13:16.723Z",
+    "__v": 0
+  
+```
+
+`GET` | `/api/book/all`
+
+```
+{
+  "books": [
+    {
+      "_id": "62670eec1ab01ad875ff38af",
+      "name": "The Hitchhiker's Guide to the Galaxy",
+      "author": "Douglas Adams",
+      "createdAt": "2022-04-25T21:13:16.723Z",
+      "updatedAt": "2022-04-25T21:13:16.723Z",
+      "__v": 0
+    }
+  ]
+```
