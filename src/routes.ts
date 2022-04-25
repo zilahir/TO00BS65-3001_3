@@ -8,14 +8,14 @@ const swaggerUiOptions = {
   customCss: '.swagger-ui .topbar { display: none }'
 };
 
-const router = Router();
+const router: Router = Router();
 
 // Book routes
-router.post('/api/book/add', BookController.add);
-router.get('/api/book/all', BookController.all);
-router.get('/api/book/search', BookController.search);
+router.post('/api/book/add', [BookController.add]);
+router.get('/api/book/all', [BookController.all]);
+router.get('/api/book/search', [BookController.search]);
 router.get('/api/book/id/:bookId', BookController.get);
-router.delete('/api/book/id/:bookId', BookController.remove);
+router.delete('/api/book/id/:bookId', [BookController.remove]);
 
 // Dev routes
 if (process.env.NODE_ENV === 'development') {
