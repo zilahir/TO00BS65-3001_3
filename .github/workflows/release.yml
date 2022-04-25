@@ -20,6 +20,8 @@ jobs:
           justlogin: true
           docker_build_args: |
             NODE_ENV
+            HD_MONGO_URL
+            MONGO_URL
       - name: "Login to heroku registry"
         run: heroku container:login
       - name: "Build and push to heroku registry"
@@ -29,3 +31,4 @@ jobs:
         env:
           NODE_ENV: production
           HD_MONGO_URL: ${{secrets.MONGO_URL}}
+          MONGO_URL: ${{secrets.MONGO_URL}}
