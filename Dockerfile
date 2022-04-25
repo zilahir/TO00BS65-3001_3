@@ -17,11 +17,12 @@ COPY src $WORKDIR/src
 COPY tsconfig.json $WORKDIR/tsconfig.json
 COPY openapi.json $WORKDIR/openapi.json
 
+ENV MONGO_URL=${HD_MONGO_URL}
+
 # Build dist
 RUN yarn build
 
 ENV NODE_PATH=/usr/app/node_modules
-# ENV MONGO_URL=${MONGO_URL}
 VOLUME ${NODE_PATH}
 
 # Copy node modules and build directory
